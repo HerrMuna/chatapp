@@ -1,0 +1,24 @@
+.Header {
+  height: 100px;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &-Button {
+    position: absolute;
+    right: 20px;
+    background-color: rgb(189, 8, 8);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+  }
+}
