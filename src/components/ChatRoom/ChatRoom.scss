@@ -1,16 +1,24 @@
 .ChatRoom {
-  width: 800px;
+  width: 100%;
+  max-width: var(--max-content-width);
   height: 100%;
   margin: auto;
   border-left: 1px solid #d3d3d3;
   border-right: 1px solid #d3d3d3;
-
+  height: calc(100vh - var(--header-height));
   display: flex;
   flex-direction: column;
 
   &-Messages {
     flex-grow: 1;
     width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-image: url(../../assets/texture.jpg);
+    background-repeat: repeat;
+    background-size: 100;
+    padding-bottom: 30px;
+    padding-top: 15px;
 
     &-Item {
       display: flex;
@@ -22,6 +30,5 @@
   &-ActionBox {
     height: 100px;
     width: 100%;
-    background-color: #d3d3d3;
   }
 }

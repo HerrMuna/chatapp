@@ -1,14 +1,18 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./App.scss";
-import Login from "./components/Login/Login";
-import ChatRoom from "./components/ChatRoom/ChatRoom";
-import Header from "./components/Header/Header";
+import React, { useState } from 'react';
+import './App.scss';
+import Login from './components/Login/Login';
+import ChatRoom from './components/ChatRoom/ChatRoom';
+import Header from './components/Header/Header';
+
+const generateRandomColor = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
 
 function App() {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
 
   const logUserIn = (name) => {
-    setUser({ name: name, color: "red" });
+    setUser({ name: name, color: generateRandomColor() });
   };
 
   const logUserOut = () => {
@@ -16,12 +20,12 @@ function App() {
   };
 
   return (
-    <div className={"App"}>
-      <Header handleLogout={logUserOut} isUserLoggedIn={user ? true : false} />
+    <div className={'App'}>
+      <Header handleLogout={logUserOut} user={user} />
 
-      <div className={"Main"}>
+      <div className={'Main'}>
         {user ? (
-          <ChatRoom user={user} />
+          <ChatRoom user={user} handleLogout={logUserOut} />
         ) : (
           <Login onLoginButtonPress={logUserIn} />
         )}

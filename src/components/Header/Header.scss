@@ -1,24 +1,50 @@
 .Header {
-  height: 100px;
+  height: var(--header-height);
   width: 100%;
-  -webkit-box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 2px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 5px -1px rgba(0, 0, 0, 0.5);
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 
-  &-Button {
-    position: absolute;
-    right: 20px;
-    background-color: rgb(189, 8, 8);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+  &-Content {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+    &-Title {
+      color: var(--color-accent);
+      font-weight: bold;
+      font-size: 45px;
+      margin: 0;
+      padding: 0;
+    }
+    &-User {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      &-Button {
+        margin-left: 20px;
+        background-color: var(--color-accent);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .Header-Content-Title {
+    font-size: 30px;
   }
 }

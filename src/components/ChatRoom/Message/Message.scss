@@ -1,0 +1,51 @@
+.Message {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px 20px 0;
+  width: 70%;
+  align-items: center;
+
+  &_my {
+    float: right;
+    flex-direction: row-reverse;
+  }
+
+  &-CircleContainer {
+    &-Circle {
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-Letter {
+        color: #fff;
+        font-weight: bold;
+        font-size: 35px;
+      }
+    }
+  }
+
+  &-ContentContainer {
+    background-color: #c0b9b9;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+
+    &_floatLeft {
+      margin-left: 15px;
+    }
+    &_floatRight {
+      margin-right: 15px;
+    }
+    &-Sender {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    &-Text {
+      margin-top: 6px;
+    }
+  }
+}
